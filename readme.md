@@ -76,10 +76,10 @@ Update the single source of truth for your profiles:
 
 ```javascript
 const LINKS = {
-  resume: "/resume.pdf", // Must match the file in /public
-  linkedin: "[https://www.linkedin.com/in/fernando-silva-83b155a4/](https://www.linkedin.com/in/fernando-silva-83b155a4/)",
-  github: "[https://github.com/silvatechf](https://github.com/silvatechf)",
-  email: "contatofernandorgt@gmail.com",
+  resume: "/resume.pdf", 
+  linkedin: "https://www.linkedin.com/in/fernando-silva-83b155a4/",
+  github: "https://github.com/silvatechf",
+  email: "your-email",
 };
 
 ```

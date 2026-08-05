@@ -24,7 +24,6 @@ const LINKS = {
   resume: "/resume.pdf",
   linkedin: "https://www.linkedin.com/in/fernando-silva-83b155a4/",
   github: "https://github.com/silvatechf",
-  email: "contatofernandorgt@gmail.com",
 };
 
 const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT;
