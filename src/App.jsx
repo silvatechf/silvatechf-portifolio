@@ -44,32 +44,36 @@ const NAV_SECTION_IDS = NAV_LINKS.map((link) => link.href.slice(1));
 
 const OPERATIONS = [
   {
-    codename: "CodeGuard AI: Enterprise Auditor",
+    codename: "Authorization Gateway: API Security",
     description:
-      "Context-aware DevSecOps tool powered by Gemini 2.0. Detects GDPR violations, PII leaks, and cloud misconfigurations, generating secure auto-remediations.",
-    tags: ["Python", "Gemini LLM", "Spring Boot", "Angular"],
-    annotation: "Status: Active. Focus: AI-Driven Application Security.",
+      "Educational FastAPI and PyJWT project demonstrating centralized, fail-closed authorization, tenant isolation, ownership checks, roles, scopes, and negative security tests.",
+    tags: ["Python", "FastAPI", "JWT", "AppSec"],
+    annotation: "Portfolio project. Not a production identity platform.",
+    url: "https://github.com/silvatechf/authorization-gateway",
   },
   {
-    codename: "NyxOne: AppSec AST Scanner",
+    codename: "AppSec Scanner: Static Analysis Lab",
     description:
-      "Static analysis engine identifying vulnerabilities via Abstract Syntax Trees. Enforces fail-fast CI/CD blocking gates with Loki and Grafana observability.",
-    tags: ["Python", "AST", "CI/CD", "Grafana"],
-    annotation: "Status: Deployed. Focus: Automated Code Auditing.",
+      "Python AST-based learning project that detects selected SQL injection and path-traversal patterns, records structured audit events, and can run as a CI security gate.",
+    tags: ["Python", "AST", "CI", "Grafana"],
+    annotation: "Learning lab. Benchmark uses 10 self-authored cases; not a production SAST replacement.",
+    url: "https://github.com/silvatechf/AppSec-Scanner",
   },
   {
-    codename: "CyberReport-Pro",
+    codename: "CyberReport-Pro: Security Reporting",
     description:
-      "Automation engine translating raw technical findings into executive PDF reports dynamically mapped to GDPR and Spain's ENS compliance frameworks.",
-    tags: ["Python", "WeasyPrint", "GDPR / ENS", "SOAR"],
-    annotation: "Status: Active. Focus: Security Compliance Automation.",
+      "Python CLI prototype that turns structured security findings into PDF reports and includes study-oriented mappings to Spain's ENS and RGPD/LOPDGDD frameworks.",
+    tags: ["Python", "CLI", "PDF", "Docker"],
+    annotation: "Portfolio project. Regulatory mappings are educational references, not legal advice.",
+    url: "https://github.com/silvatechf/CyberReport-Pro",
   },
   {
-    codename: "SecOps Telemetry Pipeline",
+    codename: "Triage Pipeline: Defensive Telemetry Lab",
     description:
-      "Data engineering laboratory capturing Linux authentication events. Features defensive IP defanging, PostgreSQL persistence, and real-time Grafana SIEM dashboards.",
-    tags: ["Python", "PostgreSQL", "Data Eng", "SecOps"],
-    annotation: "Status: Active. Focus: Threat Detection & Forensics.",
+      "Small Flask API lab that receives simulated authentication telemetry and applies an explainable heuristic risk score for local study.",
+    tags: ["Python", "Flask", "REST API", "Security"],
+    annotation: "Educational prototype; no authentication, durable storage, or validated detection thresholds.",
+    url: "https://github.com/silvatechf/triage-pipeline",
   },
   {
     codename: "DuckyArenas — Shop & Bank Backend",
@@ -100,13 +104,13 @@ const ARTICLES = [
     kind: "PROJECT REPOSITORY",
     title: "AppSec Scanner: Python AST and CI experiments",
     tag: "Static Analysis · CI",
-    url: "https://github.com/silvatechf/AppSec-Scanner.git", 
+    url: "https://github.com/silvatechf/AppSec-Scanner", 
   },
   {
     kind: "PROJECT REPOSITORY",
-    title: "Network Security Analytics: Linux telemetry",
-    tag: "Detection · Observability",
-    url: "https://github.com/silvatechf/network-security-analytics.git",
+    title: "Triage Pipeline: defensive telemetry lab",
+    tag: "Python · Flask · REST API",
+    url: "https://github.com/silvatechf/triage-pipeline",
   },
 ];
 
