@@ -70,6 +70,13 @@ const OPERATIONS = [
     tags: ["Python", "PostgreSQL", "Data Eng", "SecOps"],
     annotation: "Status: Active. Focus: Threat Detection & Forensics.",
   },
+  {
+    codename: "DuckyArenas — Shop & Bank Backend",
+    description:
+      "Academic team project. Individual contribution to Django backend components for the shop catalog, wallet transactions, purchase coordination, and idempotency. This entry describes my contribution, not the whole team project.",
+    tags: ["Python", "Django", "Transactions", "Testing"],
+    annotation: "Academic contribution. PR #87 merged; PR #122 remains a separate review item.",
+  },
 ];
 
 const ARTICLES = [
