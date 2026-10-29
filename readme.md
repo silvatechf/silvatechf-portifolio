@@ -58,7 +58,7 @@ npm run preview   # preview the production build locally
 ├── package.json
 ├── public/
 │   ├── favicon.svg
-│   ├── profile.jpg         # ← Add your headshot here
+│   ├── profile.jpeg         # ← Add your headshot here
 │   └── resume.pdf          # ← Add your PDF résumé here
 └── src/
     ├── main.jsx            # React root
