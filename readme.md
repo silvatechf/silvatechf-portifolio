@@ -22,13 +22,16 @@ A single-page portfolio for a DevSecOps Engineer specializing in Application Sec
 
 ---
 
-## 🚀 Active Operations & Architecture
+## 🚀 Featured Work & Academic Contributions
 
-The portfolio highlights production-ready security engineering:
-* **CodeGuard AI:** Context-aware SAST powered by Gemini 2.0.
-* **NyxOne:** Python AST Engine with CI/CD blocking gates and Grafana observability.
-* **CyberReport-Pro:** Compliance automation mapping findings to GDPR/ENS.
+The portfolio presents selected security/backend projects and distinguishes personal work from academic team contributions:
+* **CodeGuard AI:** Security-analysis experiment; consult its repository for current scope and limitations.
+* **NyxOne:** Python AST and CI security-gate experiment; consult its repository for current scope and limitations.
+* **CyberReport-Pro:** Python security-reporting automation with study-oriented GDPR/ENS mappings.
 * **SecOps Telemetry:** Linux authentication analytics via PostgreSQL and Grafana SIEM.
+* **DuckyArenas — DuckyShop & DuckyBank:** Academic team project. My individual contribution focuses on Django shop/catalog and wallet/transaction backend components, purchase coordination, and idempotency. [PR #87](https://github.com/Martret92/duckyarenas-team5/pull/87) is merged; [PR #122](https://github.com/Martret92/duckyarenas-team5/pull/122) is a separate review item and is not described as merged.
+
+The DuckyArenas entry describes an individual contribution to a collaborative repository, not ownership of the entire project or a claim that every integration decision is complete.
 
 ---
 
