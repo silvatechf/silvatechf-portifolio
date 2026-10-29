@@ -1,7 +1,7 @@
 
-# Fernando Silva — DevSecOps Portfolio
+# Fernando Silva — Python Backend & Application Security Portfolio
 
-A single-page portfolio for a DevSecOps Engineer specializing in Application Security, automated telemetry, and AI-driven auditing. Built as a static site with a restrained, editorial "security dossier" aesthetic — no neon, no matrix rain, no generic SaaS blue.
+A single-page portfolio presenting my path toward junior Python backend development and application security. It highlights selected projects, security labs, and academic work without treating every experiment as production-ready. Built as a static site with a restrained, editorial "security dossier" aesthetic.
 
 **Live sections:** Briefing (hero) · Dossier (about) · Operations (projects) · Intel (writing) · Credentials (certifications & stack) · Contact
 
