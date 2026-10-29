@@ -40,6 +40,7 @@ const NAV_LINKS = [
   { label: "Credentials", href: "#credentials" },
   { label: "Contact", href: "#contact" },
 ];
+const NAV_SECTION_IDS = NAV_LINKS.map((link) => link.href.slice(1));
 
 const OPERATIONS = [
   {
@@ -82,34 +83,29 @@ const OPERATIONS = [
 
 const ARTICLES = [
   {
-    date: "2026.08.01",
-    title: "Automating SOC Reporting: Mapping technical findings to GDPR and ENS",
-    time: "8 min read",
-    tag: "Security Compliance",
-    featured: true,
+    kind: "PROJECT REPOSITORY",
+    title: "CyberReport-Pro: Security reporting automation",
+    tag: "Python · Compliance mapping",
     url: "https://github.com/silvatechf/CyberReport-Pro",
     excerpt:
       "Field notes on building a Python automation engine that translates raw technical findings into executive PDF reports aligned with European regulations.",
   },
   {
-    date: "2026.07.15",
-    title: "Context-Aware SAST: Building CodeGuard AI with Gemini 2.0 Flash",
-    time: "6 min read",
-    tag: "AI & AppSec",
+    kind: "PROJECT REPOSITORY",
+    title: "CodeGuard AI: Context-aware code review experiment",
+    tag: "AI · Application Security",
     url: "https://github.com/silvatechf/codeguard-ai",
   },
   {
-    date: "2026.06.20",
-    title: "Engineering an AppSec Scanner: Python AST, Loki, and CI/CD blocking gates",
-    time: "7 min read",
-    tag: "Secure Architecture",
+    kind: "PROJECT REPOSITORY",
+    title: "AppSec Scanner: Python AST and CI experiments",
+    tag: "Static Analysis · CI",
     url: "https://github.com/silvatechf/AppSec-Scanner.git", 
   },
   {
-    date: "2026.05.10",
-    title: "SecOps Analytics: Normalizing Linux telemetry and Grafana SIEM dashboards",
-    time: "5 min read",
-    tag: "Detection Engineering",
+    kind: "PROJECT REPOSITORY",
+    title: "Network Security Analytics: Linux telemetry",
+    tag: "Detection · Observability",
     url: "https://github.com/silvatechf/network-security-analytics.git",
   },
 ];
@@ -175,23 +171,17 @@ const CONTINUING_EDUCATION = [
 ];
 
 const STACK = [
-  { name: "Python", level: 10 },
-  { name: "Linux Hardening & Kali", level: 9 },
-  { name: "Cybersecurity Tooling (Nmap/Metasploit)", level: 9 },
-  { name: "Docker / CI/CD", level: 8 },
-  { name: "PostgreSQL / SQL", level: 8 },
-  { name: "TypeScript / React", level: 7 },
+  { name: "Python", focus: "Backend development, scripting, and testing" },
+  { name: "Django / FastAPI", focus: "APIs, business logic, and validation" },
+  { name: "SQL / PostgreSQL", focus: "Relational data and persistence" },
+  { name: "Pytest", focus: "Automated tests and edge cases" },
+  { name: "Application Security", focus: "Secure coding and input validation" },
+  { name: "Docker / CI", focus: "Local environments and delivery workflows" },
 ];
 
 /* -------------------------------------------------------------------- */
 /*  UTILITIES & HOOKS                                                   */
 /* -------------------------------------------------------------------- */
-
-function block(level) {
-  const filled = "█".repeat(level);
-  const empty = "░".repeat(10 - level);
-  return filled + empty;
-}
 
 function useReveal() {
   const ref = useRef(null);
@@ -737,7 +727,7 @@ function Hero() {
       <div className="hidden md:flex absolute bottom-10 right-10 items-center gap-2 font-mono text-[11px] text-accent-tertiary">
         <span className="h-1.5 w-1.5 rounded-full bg-accent-tertiary animate-pulse-soft" />
         <span className="animate-pulse-soft">
-          SYSTEM NODE BCN-01 :: TLS 1.3 :: AES-256-GCM :: {token}
+          PYTHON :: BACKEND :: APPSEC :: {token}
         </span>
       </div>
     </section>
@@ -750,7 +740,7 @@ function Hero() {
 
 function SecureTerminal() {
   const fullCommand =
-    "python auditor.py --target prod.internal --scan-config-files";
+    "python -m pytest tests/ -q";
   const [typed, setTyped] = useState("");
   const [ref, visible] = useReveal();
 
@@ -952,7 +942,7 @@ function Intel() {
         </Reveal>
         <Reveal delay={60}>
           <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary mb-12">
-            Field Notes & Technical Writings
+            Selected Project Repositories
           </h2>
         </Reveal>
 
@@ -969,7 +959,7 @@ function Intel() {
                   <div className="space-y-1">
                     <div className="flex items-center gap-3">
                       <span className="font-mono text-[11px] text-accent-tertiary">
-                        {art.date}
+                        {art.kind || "PROJECT"}
                       </span>
                       <span className="font-mono text-[10px] uppercase tracking-widest text-text-secondary px-2 py-0.5 border border-line rounded-xs">
                         {art.tag}
@@ -985,7 +975,7 @@ function Intel() {
                     )}
                   </div>
                   <div className="flex items-center gap-3 text-text-secondary shrink-0 font-mono text-xs">
-                    <span>{art.time}</span>
+                    <span>Open repository</span>
                     <ArrowUpRight size={14} className="group-hover:text-accent-primary transition-colors" />
                   </div>
                 </div>
@@ -1111,14 +1101,12 @@ function Credentials() {
                 Capability Matrix
               </h2>
             </Reveal>
-            <div className="space-y-4 font-mono text-xs md:text-sm">
-              {STACK.map((s, i) => (
-                <Reveal key={s.name} delay={100 + i * 60}>
-                  <div className="flex items-center justify-between gap-4 border-t border-line py-3 last:border-b">
-                    <span className="text-text-primary">{s.name}</span>
-                    <span className="text-accent-primary tracking-tight">
-                      {block(s.level)}
-                    </span>
+            <div className="space-y-4">
+              {STACK.map((skill, i) => (
+                <Reveal key={skill.name} delay={100 + i * 60}>
+                  <div className="border-t border-line py-4 last:border-b">
+                    <h3 className="font-mono text-sm text-text-primary">{skill.name}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-text-secondary">{skill.focus}</p>
                   </div>
                 </Reveal>
               ))}
@@ -1312,7 +1300,7 @@ function Footer() {
         <div className="flex items-center gap-8">
           <div className="flex items-center gap-2">
             <Lock size={12} className="text-accent-secondary" />
-            <span>ENCRYPTED END-TO-END</span>
+            <span>OPEN SOURCE · PROJECT NOTES</span>
           </div>
           <a
             href={LINKS.github}
@@ -1335,7 +1323,7 @@ function Footer() {
 export default function App() {
   const [booted, setBooted] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(false);
-  const activeSection = useActiveSection(NAV_LINKS.map((n) => n.href.slice(1)));
+  const activeSection = useActiveSection(NAV_SECTION_IDS);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
