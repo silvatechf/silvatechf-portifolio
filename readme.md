@@ -3,6 +3,8 @@
 
 A single-page portfolio presenting my path toward junior Python backend development and application security. It highlights selected projects, security labs, and academic work without treating every experiment as production-ready. Built as a static site with a restrained, editorial "security dossier" aesthetic.
 
+**Live site:** [Open my portfolio](https://silvatechf-portifolio.vercel.app) · [DuckyArenas contribution card](https://silvatechf-portifolio.vercel.app/#duckyarenas-contribution)
+
 **Live sections:** Briefing (hero) · Dossier (about) · Operations (projects) · Intel (writing) · Credentials (certifications & stack) · Contact
 
 ---
