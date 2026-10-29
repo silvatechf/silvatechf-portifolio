@@ -960,7 +960,9 @@ function Intel() {
           {ARTICLES.map((art, i) => (
             <Reveal key={art.title} delay={i * 50}>
               <a
-                href={art.url || "#"}
+                href={art.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group block p-6 border border-line rounded-sm bg-bg-secondary hover:border-accent-primary/40 transition-all duration-200"
               >
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -1138,6 +1140,7 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!FORMSPREE_ENDPOINT) return;
     setLoading(true);
 
     try {
@@ -1206,7 +1209,17 @@ function Contact() {
         <div>
           <Reveal delay={100}>
             <div className="bg-bg-tertiary border border-line p-8 rounded-sm">
-              {submitted ? (
+              {!FORMSPREE_ENDPOINT ? (
+                <div className="py-12 text-center space-y-4">
+                  <div className="w-12 h-12 rounded-full bg-accent-primary/10 border border-accent-primary flex items-center justify-center mx-auto text-accent-primary">
+                    <Send size={22} />
+                  </div>
+                  <h3 className="font-display text-xl text-text-primary">Contact form not configured</h3>
+                  <p className="font-mono text-xs text-text-secondary max-w-sm mx-auto">
+                    The form is not active yet. Please contact me through LinkedIn or GitHub using the links on this page.
+                  </p>
+                </div>
+              ) : submitted ? (
                 <div className="py-12 text-center space-y-4">
                   <div className="w-12 h-12 rounded-full bg-accent-primary/10 border border-accent-primary flex items-center justify-center mx-auto text-accent-primary">
                     <ShieldCheck size={24} />
