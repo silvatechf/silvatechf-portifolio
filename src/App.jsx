@@ -694,8 +694,8 @@ function Hero() {
           <div className="flex items-center gap-4 mt-8 mb-6 max-w-xl">
             <span className="h-px w-12 bg-accent-secondary shrink-0" />
             <p className="font-body text-text-secondary text-sm md:text-base">
-              DevSecOps Engineer. Cybersecurity Specialist. Based in Barcelona, focused on building
-              and auditing automated security tools and resilient pipelines.
+              Junior Python Backend Developer focused on Application Security (AppSec). Based in
+              Barcelona, I build and test backend features and security-focused tools.
             </p>
           </div>
         </Reveal>
@@ -836,19 +836,19 @@ function About() {
           </Reveal>
           <Reveal delay={60}>
             <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary mb-8">
-              Offense and defense are not separate disciplines.
+              I build backend software with security in mind.
             </h2>
           </Reveal>
           <Reveal delay={120}>
             <div className="space-y-5 text-text-secondary text-sm md:text-base leading-relaxed max-w-xl">
               <p>
-                I work at the intersection of software development and cybersecurity operations (DevSecOps) based in Barcelona. Python is my core tool — whether building AST engines and anomaly triage pipelines, or automating tests against the attack surface of infrastructures.
+                I'm a Python developer in Barcelona, building my path toward backend engineering and application security. I use Python and frameworks such as Django and FastAPI to explore APIs, business rules, data integrity, and security controls through practical projects.
               </p>
               <p>
-                My competitive edge lies in data-driven security engineering and automation. I have hands-on experience building Linux event monitoring labs, Flask microservices for mechanical brute-force evaluation, and recon tools like CTI engines and asset auditing scripts.
+                In my projects, I focus on making behavior explicit and testable: validating inputs, checking authorization boundaries, handling failure cases, and recording useful evidence. My security labs help me investigate defensive monitoring, static analysis, and authorized attack-surface assessment without presenting learning experiments as production systems.
               </p>
               <p>
-                When I'm not monitoring telemetry or hardening Docker containers with PostgreSQL, I dedicate time to researching emerging threat vectors and refining my operational security methodology. Continuous learning keeps my technical edge razor-sharp.
+                I'm continuing to strengthen my Python, object-oriented programming, testing, and secure coding skills. I document what I build, what the tests demonstrate, and what remains limited or unfinished. I'm looking for a junior team where I can contribute, learn through code review, and grow as an engineer.
               </p>
             </div>
           </Reveal>
