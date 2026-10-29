@@ -5,7 +5,7 @@ A single-page portfolio presenting my path toward junior Python backend developm
 
 **Live site:** [Open my portfolio](https://silvatechf-portifolio.vercel.app) · [DuckyArenas contribution card](https://silvatechf-portifolio.vercel.app/#duckyarenas-contribution)
 
-**Live sections:** Briefing (hero) · Dossier (about) · Operations (projects) · Intel (writing) · Credentials (certifications & stack) · Contact
+**Live sections:** Briefing (hero) · Dossier (about) · Operations (projects) · Intel (selected repositories) · Credentials (certifications & skills) · Contact
 
 ---
 
@@ -18,7 +18,7 @@ A single-page portfolio presenting my path toward junior Python backend developm
 | **Styling** | Tailwind CSS 3 *(custom theme, no default palette)* |
 | **Icons** | `lucide-react` |
 | **Fonts** | Space Grotesk *(display)* · JetBrains Mono *(terminal/data)* · Inter *(body)* |
-| **Forms** | Formspree *(falls back gracefully if unconfigured)* |
+| **Contact form** | Formspree endpoint via `VITE_FORMSPREE_ENDPOINT` *(shows direct-contact guidance if unset)* |
 
 *Output is 100% static — no server, no database, no backend runtime. `npm run build` produces plain HTML/CSS/JS that can be hosted anywhere.*
 
@@ -54,7 +54,7 @@ npm run preview   # preview the production build locally
 ```text
 ├── index.html              # Entry HTML — meta tags, fonts, JSON-LD
 ├── tailwind.config.js      # Custom color palette, fonts, animation tokens
-├── .env                    # Environment variables (Formspree endpoint)
+├── .env                    # Optional local environment variables
 ├── package.json
 ├── public/
 │   ├── favicon.svg
@@ -93,17 +93,17 @@ const LINKS = {
 
 * `NAV_LINKS`: Top navigation and command palette entries.
 * `OPERATIONS`: Project/case-study cards (e.g., CodeGuard AI, NyxOne).
-* `ARTICLES`: Intel (blog) entries and field notes.
+* `ARTICLES`: Selected repository links shown in the Intel section.
 * `CERTIFICATIONS`: Formal certifications. Add a `credentialUrl` to activate the real clickable "Verified" badge.
 * `CONTINUING_EDUCATION`: Courses and self-study, rendered with lighter visual weight.
-* `STACK`: Capability matrix (level is 0–10, rendered as block characters).
+* `STACK`: Skills and the practical areas I am currently working with.
 
 ### 3. Contact Form & Environment Variables
 
 To protect your API endpoints, use a `.env` file at the root of the project:
 
 ```text
-VITE_FORMSPREE_ENDPOINT="[https://formspree.io/f/YOUR_FORM_ID](https://formspree.io/f/YOUR_FORM_ID)"
+VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/YOUR_FORM_ID
 
 ```
 
@@ -114,7 +114,7 @@ const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT;
 
 ```
 
-Create a free form at [Formspree](https://formspree.io) and paste your ID into the `.env` file. Until configured, the form runs through its full UX (encrypting → sent) without actually delivering mail, allowing you to test the flow.
+Create a form at [Formspree](https://formspree.io) and set its endpoint in `.env` for local development and in Vercel Environment Variables for the deployed site. Until configured, the site clearly indicates that the form is inactive and directs visitors to LinkedIn or GitHub; it does not simulate a successful delivery.
 
 ### 4. Assets
 
@@ -126,7 +126,7 @@ Create a free form at [Formspree](https://formspree.io) and paste your ID into t
 ## 🔍 Implementation Details
 
 * **Command Palette (`⌘K` / `Ctrl+K`):** Keyboard-first navigation across sections and external links.
-* **Boot Sequence:** One-time system-initialization overlay per browser session (`sessionStorage`), skipped entirely for users with `prefers-reduced-motion`.
+* **Boot Sequence:** Brief system-initialization overlay, skipped for users with `prefers-reduced-motion`.
 * **Scroll Hex Rail:** Desktop-only telemetry readout tied to scroll position — a restrained motion motif instead of a decorative looping animation.
 * **Custom Cursor:** Active only on precise-pointer devices (`hover: hover` + `pointer: fine`). Never interferes with touch devices.
 * **Accessibility:** All motion strictly respects `prefers-reduced-motion: reduce` across the entire DOM.
