@@ -76,6 +76,7 @@ const OPERATIONS = [
       "Academic team project. Individual contribution to Django backend components for the shop catalog, wallet transactions, purchase coordination, and idempotency. This entry describes my contribution, not the whole team project.",
     tags: ["Python", "Django", "Transactions", "Testing"],
     annotation: "Academic contribution. PR #87 merged; PR #122 remains a separate review item.",
+    url: "https://github.com/Martret92/duckyarenas-team5/pull/87",
   },
 ];
 
@@ -876,7 +877,13 @@ function OperationCard({ op, index }) {
       <article className="group relative border border-line rounded-sm bg-bg-secondary p-8 h-full flex flex-col justify-between">
         <div>
           <h3 className="font-display font-semibold text-xl text-text-primary mb-3">
-            {op.codename}
+            {op.url ? (
+              <a href={op.url} target="_blank" rel="noreferrer" className="hover:text-accent-primary transition-colors">
+                {op.codename} <ArrowUpRight size={14} className="inline" />
+              </a>
+            ) : (
+              op.codename
+            )}
           </h3>
           <p className="text-text-secondary text-sm leading-relaxed mb-6">
             {op.description}
