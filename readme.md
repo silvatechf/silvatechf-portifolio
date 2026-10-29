@@ -29,7 +29,7 @@ The portfolio presents selected security/backend projects and distinguishes pers
 * **NyxOne:** Python AST and CI security-gate experiment; consult its repository for current scope and limitations.
 * **CyberReport-Pro:** Python security-reporting automation with study-oriented GDPR/ENS mappings.
 * **SecOps Telemetry:** Linux authentication analytics via PostgreSQL and Grafana SIEM.
-* **DuckyArenas — DuckyShop & DuckyBank:** Academic team project. My individual contribution focuses on Django shop/catalog and wallet/transaction backend components, purchase coordination, and idempotency. [PR #87](https://github.com/Martret92/duckyarenas-team5/pull/87) is merged; [PR #122](https://github.com/Martret92/duckyarenas-team5/pull/122) is a separate review item and is not described as merged.
+* **DuckyArenas — DuckyShop & DuckyBank:** Academic team project. My individual contribution focuses on Django shop/catalog and wallet/transaction backend components, purchase coordination, and idempotency. [PR #87](https://github.com/Martret92/duckyarenas-team5/pull/87) is merged; [PR #122](https://github.com/Martret92/duckyarenas-team5/pull/122) is a separate review item and is not described as merged. [Individual contribution case study](DUCKYARENAS_CONTRIBUTION.md).
 
 The DuckyArenas entry describes an individual contribution to a collaborative repository, not ownership of the entire project or a claim that every integration decision is complete.
 
