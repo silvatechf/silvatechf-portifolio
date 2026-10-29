@@ -793,7 +793,7 @@ function DossierPhoto() {
       {!imgFailed && (
         <>
           <img
-            src="profile.jpeg"
+            src="/profile.jpg"
             alt="Portrait of Fernando Silva"
             className="absolute inset-0 w-full h-full object-cover grayscale contrast-125"
             onError={() => setImgFailed(true)}
