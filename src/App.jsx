@@ -1335,6 +1335,17 @@ export default function App() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
+  // Resolve direct links such as /#duckyarenas-contribution after React has
+  // mounted the target element. Native hash scrolling can run before this SPA
+  // has rendered its content, leaving the browser at the top of the page.
+  useEffect(() => {
+    if (!window.location.hash) return;
+    const targetId = decodeURIComponent(window.location.hash.slice(1));
+    requestAnimationFrame(() => {
+      document.getElementById(targetId)?.scrollIntoView({ block: "start" });
+    });
+  }, []);
+
   return (
     <div className="min-h-screen bg-bg-primary text-text-primary font-body selection:bg-accent-primary/20 selection:text-accent-primary">
       {!booted && <BootSequence onDone={() => setBooted(true)} />}
