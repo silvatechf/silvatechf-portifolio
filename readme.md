@@ -94,7 +94,7 @@ const LINKS = {
 ### 2. Content Arrays
 
 * `NAV_LINKS`: Top navigation and command palette entries.
-* `OPERATIONS`: Project/case-study cards (e.g., CodeGuard AI, NyxOne).
+* `OPERATIONS`: Featured project and contribution cards, including DeviceTrust, Authorization Gateway, AppSec Scanner, CyberReport-Pro, Triage Pipeline, and DuckyArenas.
 * `ARTICLES`: Selected repository links shown in the Intel section.
 * `CERTIFICATIONS`: Formal certifications. Add a `credentialUrl` to activate the real clickable "Verified" badge.
 * `CONTINUING_EDUCATION`: Courses and self-study, rendered with lighter visual weight.
