@@ -44,6 +44,14 @@ const NAV_SECTION_IDS = NAV_LINKS.map((link) => link.href.slice(1));
 
 const OPERATIONS = [
   {
+    codename: "DeviceTrust: Product Security Evidence Platform",
+    description:
+      "Python/FastAPI modular-monolith prototype for product-security evidence: product and release records, validated CycloneDX SBOM imports, component-level findings, justified vulnerability triage, and a verifiable audit history. Recent engineering work serializes concurrent writers so domain changes and audit entries commit or roll back together.",
+    tags: ["Python", "FastAPI", "PostgreSQL", "AppSec"],
+    annotation: "Early-stage technical prototype. Not a CRA compliance tool, conformity assessor, or production security service.",
+    url: "https://github.com/silvatechf/DeviceTrust",
+  },
+  {
     codename: "Authorization Gateway: API Security",
     description:
       "Educational FastAPI and PyJWT project demonstrating centralized, fail-closed authorization, tenant isolation, ownership checks, roles, scopes, and negative security tests.",
@@ -80,7 +88,7 @@ const OPERATIONS = [
     description:
       "Academic team project. Individual contribution to Django backend components for the shop catalog, wallet transactions, purchase coordination, and idempotency. This entry describes my contribution, not the whole team project.",
     tags: ["Python", "Django", "Transactions", "Testing"],
-    annotation: "Academic contribution. PR #87 merged; PR #122 remains a separate review item.",
+    annotation: "Academic contribution. PRs #87, #122, #127, #129, #130 and #132 merged; integration scope remains subject to the team repository documentation.",
     url: "https://github.com/Martret92/duckyarenas-team5/pull/87",
   },
 ];
@@ -96,9 +104,11 @@ const ARTICLES = [
   },
   {
     kind: "PROJECT REPOSITORY",
-    title: "CodeGuard AI: Context-aware code review experiment",
-    tag: "AI · Application Security",
-    url: "https://github.com/silvatechf/codeguard-ai",
+    title: "DeviceTrust: Product security evidence management",
+    tag: "Python · FastAPI · SBOM · Audit",
+    url: "https://github.com/silvatechf/DeviceTrust",
+    excerpt:
+      "An early-stage product-security prototype connecting product context, CycloneDX SBOM imports, vulnerability triage, and transactionally serialized audit evidence.",
   },
   {
     kind: "PROJECT REPOSITORY",
