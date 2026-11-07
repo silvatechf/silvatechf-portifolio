@@ -48,7 +48,7 @@ const OPERATIONS = [
     description:
       "Python/FastAPI modular-monolith prototype for product-security evidence: product and release records, validated CycloneDX SBOM imports, component-level findings, justified vulnerability triage, and a verifiable audit history. Recent engineering work serializes concurrent writers so domain changes and audit entries commit or roll back together.",
     tags: ["Python", "FastAPI", "PostgreSQL", "AppSec"],
-    annotation: "Early-stage technical prototype. Not a CRA compliance tool, conformity assessor, or production security service.",
+    annotation: "PR #30 merged; CI and CodeQL passed. Early-stage prototype, not a CRA compliance or production security service.",
     url: "https://github.com/silvatechf/DeviceTrust",
   },
   {
@@ -94,6 +94,14 @@ const OPERATIONS = [
 ];
 
 const ARTICLES = [
+  {
+    kind: "ENGINEERING EVIDENCE",
+    title: "DeviceTrust PR #30: Transactional audit-writer serialization",
+    tag: "Concurrency · PostgreSQL · Rollback · CodeQL",
+    url: "https://github.com/silvatechf/DeviceTrust/pull/30",
+    excerpt:
+      "Merged implementation with API-level concurrent-write and rollback tests on SQLite and PostgreSQL, plus disposable-database migration round-trip coverage.",
+  },
   {
     kind: "PROJECT REPOSITORY",
     title: "CyberReport-Pro: Security reporting automation",
