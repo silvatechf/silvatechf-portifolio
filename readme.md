@@ -27,11 +27,13 @@ A single-page portfolio presenting my path toward junior Python backend developm
 ## 🚀 Featured Work & Academic Contributions
 
 The portfolio presents selected security/backend projects and distinguishes personal work from academic team contributions:
-* **CodeGuard AI:** Security-analysis experiment; consult its repository for current scope and limitations.
-* **NyxOne:** Python AST and CI security-gate experiment; consult its repository for current scope and limitations.
-* **CyberReport-Pro:** Python security-reporting automation with study-oriented GDPR/ENS mappings.
-* **SecOps Telemetry:** Linux authentication analytics via PostgreSQL and Grafana SIEM.
-* **DuckyArenas — DuckyShop & DuckyBank:** Academic team project. My individual contribution focuses on Django shop/catalog and wallet/transaction backend components, purchase coordination, and idempotency. [PR #87](https://github.com/Martret92/duckyarenas-team5/pull/87) is merged; [PR #122](https://github.com/Martret92/duckyarenas-team5/pull/122) is a separate review item and is not described as merged. [Individual contribution case study](DUCKYARENAS_CONTRIBUTION.md).
+
+* **DeviceTrust:** Early-stage Python/FastAPI product-security evidence prototype. It connects product/release context, validated CycloneDX SBOM imports, component findings, justified vulnerability triage, and transactionally serialized audit evidence. It is not a CRA compliance tool or production security service.
+* **Authorization Gateway:** Educational FastAPI/PyJWT authorization project with fail-closed policies, tenant isolation, ownership checks, roles/scopes, and negative tests.
+* **AppSec Scanner:** Python AST-based learning lab for selected SQL injection and path-traversal patterns, structured audit events, and a CI gate. Its benchmark is limited to 10 self-authored cases.
+* **CyberReport-Pro:** Python security-reporting automation with study-oriented ENS/RGPD/LOPDGDD mappings.
+* **Triage Pipeline:** Flask lab for simulated authentication telemetry and explainable heuristic scoring; not a validated detection service.
+* **DuckyArenas — DuckyShop & DuckyBank:** Academic team project. My individual contribution covers Django shop/catalog and wallet/transaction backend components, purchase coordination, idempotency, HTTP views, and follow-up documentation. PRs [#87](https://github.com/Martret92/duckyarenas-team5/pull/87), [#122](https://github.com/Martret92/duckyarenas-team5/pull/122), [#127](https://github.com/Martret92/duckyarenas-team5/pull/127), [#129](https://github.com/Martret92/duckyarenas-team5/pull/129), [#130](https://github.com/Martret92/duckyarenas-team5/pull/130), and [#132](https://github.com/Martret92/duckyarenas-team5/pull/132) are merged. [Individual contribution case study](DUCKYARENAS_CONTRIBUTION.md).
 
 The DuckyArenas entry describes an individual contribution to a collaborative repository, not ownership of the entire project or a claim that every integration decision is complete.
 
@@ -118,7 +120,7 @@ Create a form at [Formspree](https://formspree.io) and set its endpoint in `.env
 
 ### 4. Assets
 
-* **Photo:** Drop a headshot at `public/profile.jpg`. It is automatically desaturated and tinted with the brand palette via CSS. If missing, the site falls back to an abstract gradient placeholder seamlessly.
+* **Photo:** Drop a headshot at `public/profile.jpeg`. It is automatically desaturated and tinted with the brand palette via CSS. If missing, the site falls back to an abstract gradient placeholder seamlessly.
 * **Résumé:** Drop a PDF at `public/resume.pdf` and ensure `LINKS.resume` points to it. The primary button will automatically detect the `.pdf` extension and switch from "open in new tab" to a forced file download.
 
 ---
