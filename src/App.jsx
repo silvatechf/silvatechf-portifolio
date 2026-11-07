@@ -879,7 +879,7 @@ function OperationCard({ op, index }) {
   return (
     <Reveal delay={index * 60}>
       <article
-        id={op.url ? "duckyarenas-contribution" : undefined}
+        id={op.codename.startsWith("DuckyArenas") ? "duckyarenas-contribution" : undefined}
         className="group relative border border-line rounded-sm bg-bg-secondary p-8 h-full flex flex-col justify-between"
       >
         <div>
