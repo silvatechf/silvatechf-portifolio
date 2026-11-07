@@ -95,12 +95,12 @@ const OPERATIONS = [
 
 const ARTICLES = [
   {
-    kind: "ENGINEERING EVIDENCE",
-    title: "DeviceTrust PR #30: Transactional audit-writer serialization",
-    tag: "Concurrency · PostgreSQL · Rollback · CodeQL",
-    url: "https://github.com/silvatechf/DeviceTrust/pull/30",
+    kind: "BACKEND & APPSEC",
+    title: "Authorization Gateway: Fail-closed API authorization",
+    tag: "FastAPI · JWT/JWKS · Tenant isolation · Tests",
+    url: "https://github.com/silvatechf/authorization-gateway",
     excerpt:
-      "Merged implementation with API-level concurrent-write and rollback tests on SQLite and PostgreSQL, plus disposable-database migration round-trip coverage.",
+      "A focused implementation study of authorization boundaries, ownership checks, tenant isolation, and negative security tests.",
   },
   {
     kind: "PROJECT REPOSITORY",
@@ -111,12 +111,12 @@ const ARTICLES = [
       "Field notes on building a Python automation engine that translates raw technical findings into executive PDF reports aligned with European regulations.",
   },
   {
-    kind: "PROJECT REPOSITORY",
-    title: "DeviceTrust: Product security evidence management",
-    tag: "Python · FastAPI · SBOM · Audit",
-    url: "https://github.com/silvatechf/DeviceTrust",
+    kind: "TEAM BACKEND CONTRIBUTION",
+    title: "DuckyArenas: Django Shop & Bank backend",
+    tag: "Django · Transactions · Idempotency · Testing",
+    url: "https://github.com/Martret92/duckyarenas-team5/pull/127",
     excerpt:
-      "An early-stage product-security prototype connecting product context, CycloneDX SBOM imports, vulnerability triage, and transactionally serialized audit evidence.",
+      "An individual contribution to a collaborative academic project, covering HTTP integration for shop and bank backend workflows; see the linked PRs and contribution case study for scope.",
   },
   {
     kind: "PROJECT REPOSITORY",
