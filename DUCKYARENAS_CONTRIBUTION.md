@@ -28,9 +28,13 @@ La implementación utiliza servicios de Django y transacciones de base de datos 
 ## Evidencias
 
 - [PR #87 — Implementación inicial de Bank y Shop](https://github.com/Martret92/duckyarenas-team5/pull/87), integrado en `develop`.
-- [PR #122 — Pruebas de idempotencia de Shop y Bank](https://github.com/Martret92/duckyarenas-team5/pull/122), que debe consultarse por separado para comprobar su estado actual. En el momento de redactar este documento estaba abierto y pendiente de revisión.
+- [PR #122 — Pruebas de idempotencia de Shop y Bank](https://github.com/Martret92/duckyarenas-team5/pull/122), integrado en `develop`.
+- [PR #127 — Capa HTTP de Bank y Shop](https://github.com/Martret92/duckyarenas-team5/pull/127), integrado en `develop`.
+- [PR #129 — Serialización de reintentos de compra concurrentes](https://github.com/Martret92/duckyarenas-team5/pull/129), integrado en `develop`. Su descripción de PR exigía validación adicional de concurrencia con dos conexiones PostgreSQL; no afirmo aquí que esa validación se haya completado.
+- [PR #130 — Provisionamiento explícito de cartera](https://github.com/Martret92/duckyarenas-team5/pull/130), integrado en `develop`.
+- [PR #132 — Alineación del ERD con los modelos integrados](https://github.com/Martret92/duckyarenas-team5/pull/132), integrado en `develop`.
 
-El PR #122 se presenta como evidencia de trabajo en revisión, no como una integración completada.
+Estos PRs documentan trabajo incremental integrado en `develop`; no implican que la rama `main` contenga todos los cambios ni que el proyecto completo esté bajo mi responsabilidad.
 
 ## Alcance y limitaciones
 
