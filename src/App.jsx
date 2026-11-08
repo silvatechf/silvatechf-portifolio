@@ -43,53 +43,53 @@ const NAV_LINKS = [
 const NAV_SECTION_IDS = NAV_LINKS.map((link) => link.href.slice(1));
 
 const OPERATIONS = [
-  {
-    codename: "DeviceTrust: Product Security Evidence Platform",
-    description:
-      "Python/FastAPI modular-monolith prototype for product-security evidence: product and release records, validated CycloneDX SBOM imports, component-level findings, justified vulnerability triage, and a verifiable audit history. Recent engineering work serializes concurrent writers so domain changes and audit entries commit or roll back together.",
-    tags: ["Python", "FastAPI", "PostgreSQL", "AppSec"],
-    annotation: "PR #30 merged; CI and CodeQL passed. Early-stage prototype, not a CRA compliance or production security service.",
-    url: "https://github.com/silvatechf/DeviceTrust",
-  },
-  {
+    {
     codename: "Authorization Gateway: API Security",
     description:
       "Educational FastAPI and PyJWT project demonstrating centralized, fail-closed authorization, tenant isolation, ownership checks, roles, scopes, and negative security tests.",
     tags: ["Python", "FastAPI", "JWT", "AppSec"],
     annotation: "Portfolio project. Not a production identity platform.",
     url: "https://github.com/silvatechf/authorization-gateway",
-  },
-  {
-    codename: "AppSec Scanner: Static Analysis Lab",
-    description:
-      "Python AST-based learning project that detects selected SQL injection and path-traversal patterns, records structured audit events, and can run as a CI security gate.",
-    tags: ["Python", "AST", "CI", "Grafana"],
-    annotation: "Learning lab. Benchmark uses 10 self-authored cases; not a production SAST replacement.",
-    url: "https://github.com/silvatechf/AppSec-Scanner",
-  },
-  {
-    codename: "CyberReport-Pro: Security Reporting",
-    description:
-      "Python CLI prototype that turns structured security findings into PDF reports and includes study-oriented mappings to Spain's ENS and RGPD/LOPDGDD frameworks.",
-    tags: ["Python", "CLI", "PDF", "Docker"],
-    annotation: "Portfolio project. Regulatory mappings are educational references, not legal advice.",
-    url: "https://github.com/silvatechf/CyberReport-Pro",
-  },
-  {
-    codename: "Triage Pipeline: Defensive Telemetry Lab",
-    description:
-      "Small Flask API lab that receives simulated authentication telemetry and applies an explainable heuristic risk score for local study.",
-    tags: ["Python", "Flask", "REST API", "Security"],
-    annotation: "Educational prototype; no authentication, durable storage, or validated detection thresholds.",
-    url: "https://github.com/silvatechf/triage-pipeline",
-  },
-  {
+  },,
+    {
     codename: "DuckyArenas — Shop & Bank Backend",
     description:
       "Academic team project. Individual contribution to Django backend components for the shop catalog, wallet transactions, purchase coordination, and idempotency. This entry describes my contribution, not the whole team project.",
     tags: ["Python", "Django", "Transactions", "Testing"],
     annotation: "Academic contribution. PRs #87, #122, #127, #129, #130 and #132 merged; integration scope remains subject to the team repository documentation.",
     url: "https://github.com/Martret92/duckyarenas-team5/pull/87",
+  },,
+    {
+    codename: "DeviceTrust: Product Security Evidence Platform",
+    description:
+      "Python/FastAPI modular-monolith prototype for product-security evidence: product and release records, validated CycloneDX SBOM imports, component-level findings, justified vulnerability triage, and a verifiable audit history. Recent engineering work serializes concurrent writers so domain changes and audit entries commit or roll back together.",
+    tags: ["Python", "FastAPI", "PostgreSQL", "AppSec"],
+    annotation: "PR #30 merged; CI and CodeQL passed. Early-stage prototype, not a CRA compliance or production security service.",
+    url: "https://github.com/silvatechf/DeviceTrust",
+  },,
+    {
+    codename: "AppSec Scanner: Static Analysis Lab",
+    description:
+      "Python AST-based learning project that detects selected SQL injection and path-traversal patterns, records structured audit events, and can run as a CI security gate.",
+    tags: ["Python", "AST", "CI", "Grafana"],
+    annotation: "Learning lab. Benchmark uses 10 self-authored cases; not a production SAST replacement.",
+    url: "https://github.com/silvatechf/AppSec-Scanner",
+  },,
+    {
+    codename: "CyberReport-Pro: Security Reporting",
+    description:
+      "Python CLI prototype that turns structured security findings into PDF reports and includes study-oriented mappings to Spain's ENS and RGPD/LOPDGDD frameworks.",
+    tags: ["Python", "CLI", "PDF", "Docker"],
+    annotation: "Portfolio project. Regulatory mappings are educational references, not legal advice.",
+    url: "https://github.com/silvatechf/CyberReport-Pro",
+  },,
+    {
+    codename: "Triage Pipeline: Defensive Telemetry Lab",
+    description:
+      "Small Flask API lab that receives simulated authentication telemetry and applies an explainable heuristic risk score for local study.",
+    tags: ["Python", "Flask", "REST API", "Security"],
+    annotation: "Educational prototype; no authentication, durable storage, or validated detection thresholds.",
+    url: "https://github.com/silvatechf/triage-pipeline",
   },
 ];
 
@@ -936,7 +936,7 @@ function Operations() {
         </Reveal>
         <Reveal delay={60}>
           <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary mb-12">
-            Active Deployments & Systems
+            Selected Projects
           </h2>
         </Reveal>
         <div className="grid md:grid-cols-2 gap-6">
@@ -1188,7 +1188,7 @@ function Contact() {
           </Reveal>
           <Reveal delay={120}>
             <p className="text-text-secondary text-sm md:text-base leading-relaxed mb-8 max-w-md">
-              Available for technical consultations, DevSecOps architecture reviews, or penetration testing operations. Send a secure payload using the transmission interface or via direct PGP channels.
+              I’m looking for junior Python Backend or Application Security opportunities. I’m also open to discussing my projects, learning, and collaborative engineering work.
             </p>
           </Reveal>
 
