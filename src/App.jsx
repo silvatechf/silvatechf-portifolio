@@ -33,11 +33,11 @@ const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT;
 /* -------------------------------------------------------------------- */
 
 const NAV_LINKS = [
-  { label: "Briefing", href: "#briefing" },
-  { label: "Dossier", href: "#dossier" },
-  { label: "Operations", href: "#operations" },
-  { label: "Intel", href: "#intel" },
-  { label: "Credentials", href: "#credentials" },
+  { label: "Overview", href: "#briefing" },
+  { label: "Profile", href: "#dossier" },
+  { label: "Projects", href: "#operations" },
+  { label: "Engineering Notes", href: "#intel" },
+  { label: "Training", href: "#credentials" },
   { label: "Contact", href: "#contact" },
 ];
 const NAV_SECTION_IDS = NAV_LINKS.map((link) => link.href.slice(1));
@@ -413,7 +413,7 @@ const COMMANDS = [
   ...NAV_LINKS.map((l) => ({ label: l.label, hint: "Navigate", href: l.href })),
   { label: "Download Resume (PDF)", hint: "Document", href: LINKS.resume },
   { label: "View Code — GitHub", hint: "External", href: LINKS.github },
-  { label: "Initiate Protocol — LinkedIn", hint: "External", href: LINKS.linkedin },
+  { label: "Connect on LinkedIn", hint: "External", href: LINKS.linkedin },
 ];
 
 function CommandPalette({ open, onClose }) {
@@ -690,7 +690,7 @@ function Hero() {
       <div className="max-w-6xl mx-auto w-full">
         <Reveal delay={0}>
           <p className="font-mono text-xs tracking-widest text-text-secondary uppercase mb-6">
-            Dossier 001 :: Unclassified
+            PYTHON BACKEND · APPLICATION SECURITY
           </p>
         </Reveal>
 
@@ -740,7 +740,7 @@ function Hero() {
               className="inline-flex items-center gap-2 justify-center rounded-sm border border-transparent text-text-secondary px-8 py-3 text-xs uppercase tracking-widest font-mono transition-all duration-200 hover:text-text-primary"
             >
               <Linkedin size={13} strokeWidth={1.5} />
-              Initiate Protocol (LinkedIn)
+              Connect on LinkedIn
             </a>
           </div>
         </Reveal>
@@ -843,7 +843,7 @@ function About() {
         <div className="md:col-span-3">
           <Reveal>
             <p className="font-mono text-xs tracking-widest text-accent-secondary uppercase mb-4">
-              Dossier / About
+              Profile / About
             </p>
           </Reveal>
           <Reveal delay={60}>
@@ -931,7 +931,7 @@ function Operations() {
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <p className="font-mono text-xs tracking-widest text-accent-secondary uppercase mb-4">
-            Operations / Projects
+            Projects / Selected Work
           </p>
         </Reveal>
         <Reveal delay={60}>
@@ -959,7 +959,7 @@ function Intel() {
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <p className="font-mono text-xs tracking-widest text-accent-secondary uppercase mb-4">
-            Intel / Publications
+            Engineering Notes / Repositories
           </p>
         </Reveal>
         <Reveal delay={60}>
@@ -1021,12 +1021,12 @@ function Credentials() {
         <div>
           <Reveal>
             <p className="font-mono text-xs tracking-widest text-accent-secondary uppercase mb-4">
-              Credentials / Certifications
+              Training / Credentials
             </p>
           </Reveal>
           <Reveal delay={60}>
             <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary mb-12">
-              Verified Badges & Industry Certs
+              Training & Credentials
             </h2>
           </Reveal>
 
@@ -1178,12 +1178,12 @@ function Contact() {
         <div>
           <Reveal>
             <p className="font-mono text-xs tracking-widest text-accent-secondary uppercase mb-4">
-              Communication Protocol
+              Contact
             </p>
           </Reveal>
           <Reveal delay={60}>
             <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary mb-6">
-              Establish Connection
+              Let's talk
             </h2>
           </Reveal>
           <Reveal delay={120}>
@@ -1235,17 +1235,17 @@ function Contact() {
                     <ShieldCheck size={24} />
                   </div>
                   <h3 className="font-display text-xl text-text-primary">
-                    Transmission Sent
+                    Message sent
                   </h3>
                   <p className="font-mono text-xs text-text-secondary max-w-xs mx-auto">
-                    Payload received and queued for analysis. Acknowledge back expected within 24h.
+                    Thanks for reaching out. I’ll review your message and get back to you.
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="space-y-1.5">
                     <label className="block font-mono text-[11px] uppercase text-text-secondary">
-                      Sender Identity (Name / Unit)
+                      Name
                     </label>
                     <input
                       name="name"
@@ -1258,7 +1258,7 @@ function Contact() {
 
                   <div className="space-y-1.5">
                     <label className="block font-mono text-[11px] uppercase text-text-secondary">
-                      Return Path (Email)
+                      Email
                     </label>
                     <input
                       name="email"
@@ -1271,7 +1271,7 @@ function Contact() {
 
                   <div className="space-y-1.5">
                     <label className="block font-mono text-[11px] uppercase text-text-secondary">
-                      Payload (Message Body)
+                      Message
                     </label>
                     <textarea
                       name="message"
@@ -1292,7 +1292,7 @@ function Contact() {
                     ) : (
                       <>
                         <Send size={13} />
-                        <span>DISPATCH TRANSMISSION</span>
+                        <span>SEND MESSAGE</span>
                       </>
                     )}
                   </button>
@@ -1316,7 +1316,7 @@ function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 font-mono text-xs text-text-secondary">
         <div className="flex items-center gap-3">
           <span className="w-2 h-2 rounded-full bg-accent-tertiary" />
-          <p>© {new Date().getFullYear()} Fernando Silva :: System Node BCN-01</p>
+          <p>© {new Date().getFullYear()} Fernando Silva · Python Backend · AppSec</p>
         </div>
 
         <div className="flex items-center gap-8">
