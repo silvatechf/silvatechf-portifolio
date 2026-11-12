@@ -26,18 +26,22 @@ A single-page portfolio presenting my path toward junior Python backend developm
 
 ## 🚀 Featured Work & Academic Contributions
 
-The portfolio presents selected security/backend projects and distinguishes personal work from academic team contributions:
+The portfolio prioritizes **Python backend engineering, secure API development, and Application Security**. Projects are presented as evidence of implementation and learning, with explicit limitations rather than claims of production readiness.
 
-* **DeviceTrust:** Early-stage Python/FastAPI product-security evidence prototype. It connects product/release context, validated CycloneDX SBOM imports, component findings, justified vulnerability triage, and transactionally serialized audit evidence. It is not a CRA compliance tool or production security service.
-* **Authorization Gateway:** Educational FastAPI/PyJWT authorization project with fail-closed policies, tenant isolation, ownership checks, roles/scopes, and negative tests.
-* **AppSec Scanner:** Python AST-based learning lab for selected SQL injection and path-traversal patterns, structured audit events, and a CI gate. Its benchmark is limited to 10 self-authored cases.
+**Featured backend and AppSec work:**
+
+* **ExposureDetect:** Authorization-first FastAPI security-assessment prototype for explicitly scoped targets, controlled probes, audit events, and JSON/Markdown/SARIF reporting. Real-hardware validation and end-to-end SARIF upload remain pending.
+* **DeviceTrust:** Early-stage Python/FastAPI product-security evidence prototype covering CycloneDX SBOM imports, vulnerability triage, traceable decisions, and assessment artifacts. Not a CRA compliance or production security service.
+* **Authorization Gateway:** Educational FastAPI/PyJWT authorization project with fail-closed policies, tenant isolation, ownership checks, roles/scopes, and negative tests. Not a production identity platform.
+* **AppSec Scanner:** Python AST learning lab for selected SQL injection and path-traversal patterns, structured audit events, and a CI gate. Its benchmark is limited to 10 self-authored cases and does not generalize to production SAST.
+
+**Collaborative and additional work:**
+
+* **DuckyArenas — DuckyShop & DuckyBank:** Academic team project. My individual contribution covers Django shop/catalog and wallet/transaction backend components, purchase coordination, idempotency, HTTP views, and follow-up documentation. PRs [#87](https://github.com/Martret92/duckyarenas-team5/pull/87), [#122](https://github.com/Martret92/duckyarenas-team5/pull/122), [#127](https://github.com/Martret92/duckyarenas-team5/pull/127), [#129](https://github.com/Martret92/duckyarenas-team5/pull/129), [#130](https://github.com/Martret92/duckyarenas-team5/pull/130), and [#132](https://github.com/Martret92/duckyarenas-team5/pull/132) are documented as merged in the existing case study. [Individual contribution case study](DUCKYARENAS_CONTRIBUTION.md).
 * **CyberReport-Pro:** Python security-reporting automation with study-oriented ENS/RGPD/LOPDGDD mappings.
 * **Triage Pipeline:** Flask lab for simulated authentication telemetry and explainable heuristic scoring; not a validated detection service.
-* **DuckyArenas — DuckyShop & DuckyBank:** Academic team project. My individual contribution covers Django shop/catalog and wallet/transaction backend components, purchase coordination, idempotency, HTTP views, and follow-up documentation. PRs [#87](https://github.com/Martret92/duckyarenas-team5/pull/87), [#122](https://github.com/Martret92/duckyarenas-team5/pull/122), [#127](https://github.com/Martret92/duckyarenas-team5/pull/127), [#129](https://github.com/Martret92/duckyarenas-team5/pull/129), [#130](https://github.com/Martret92/duckyarenas-team5/pull/130), and [#132](https://github.com/Martret92/duckyarenas-team5/pull/132) are merged. [Individual contribution case study](DUCKYARENAS_CONTRIBUTION.md).
 
 The DuckyArenas entry describes an individual contribution to a collaborative repository, not ownership of the entire project or a claim that every integration decision is complete.
-
----
 
 ## 💻 Getting Started
 
@@ -94,7 +98,7 @@ const LINKS = {
 ### 2. Content Arrays
 
 * `NAV_LINKS`: Top navigation and command palette entries.
-* `OPERATIONS`: Featured project and contribution cards, including DeviceTrust, Authorization Gateway, AppSec Scanner, CyberReport-Pro, Triage Pipeline, and DuckyArenas.
+* `OPERATIONS`: Featured project and contribution cards, including ExposureDetect, DeviceTrust, Authorization Gateway, AppSec Scanner, DuckyArenas, CyberReport-Pro, and Triage Pipeline.
 * `ARTICLES`: Selected repository links shown in the Intel section.
 * `CERTIFICATIONS`: Formal certifications. Add a `credentialUrl` to activate the real clickable "Verified" badge.
 * `CONTINUING_EDUCATION`: Courses and self-study, rendered with lighter visual weight.
