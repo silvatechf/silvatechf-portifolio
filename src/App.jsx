@@ -43,47 +43,55 @@ const NAV_LINKS = [
 const NAV_SECTION_IDS = NAV_LINKS.map((link) => link.href.slice(1));
 
 const OPERATIONS = [
-    {
+  {
+    codename: "ExposureDetect: Authorized Exposure Assessment",
+    description:
+      "Python/FastAPI security assessment prototype for explicitly authorized targets. Includes expiring scan scope, DNS resolution safeguards, constrained probes, audit events, and JSON, Markdown, and SARIF reporting.",
+    tags: ["Python", "FastAPI", "PostgreSQL", "AppSec"],
+    annotation: "Controlled assessment prototype. Real-hardware validation and end-to-end SARIF upload remain pending; not a substitute for network controls.",
+    url: "https://github.com/silvatechf/exposure_detect",
+  },
+  {
+    codename: "DeviceTrust: Product Security Evidence Platform",
+    description:
+      "Python/FastAPI product-security prototype for product and release context, CycloneDX SBOM imports, vulnerability triage, auditable decisions, and traceable assessment artifacts.",
+    tags: ["Python", "FastAPI", "SQLAlchemy", "SBOM"],
+    annotation: "Early-stage prototype. Not a CRA compliance tool, conformity assessment, or production security service.",
+    url: "https://github.com/silvatechf/DeviceTrust",
+  },
+  {
     codename: "Authorization Gateway: API Security",
     description:
       "Educational FastAPI and PyJWT project demonstrating centralized, fail-closed authorization, tenant isolation, ownership checks, roles, scopes, and negative security tests.",
     tags: ["Python", "FastAPI", "JWT", "AppSec"],
     annotation: "Portfolio project. Not a production identity platform.",
     url: "https://github.com/silvatechf/authorization-gateway",
-  },,
-    {
-    codename: "DuckyArenas — Shop & Bank Backend",
-    description:
-      "Academic team project. Individual contribution to Django backend components for the shop catalog, wallet transactions, purchase coordination, and idempotency. This entry describes my contribution, not the whole team project.",
-    tags: ["Python", "Django", "Transactions", "Testing"],
-    annotation: "Academic contribution. PRs #87, #122, #127, #129, #130 and #132 merged; integration scope remains subject to the team repository documentation.",
-    url: "https://github.com/Martret92/duckyarenas-team5/pull/87",
-  },,
-    {
-    codename: "DeviceTrust: Product Security Evidence Platform",
-    description:
-      "Python/FastAPI modular-monolith prototype for product-security evidence: product and release records, validated CycloneDX SBOM imports, component-level findings, justified vulnerability triage, and a verifiable audit history. Recent engineering work serializes concurrent writers so domain changes and audit entries commit or roll back together.",
-    tags: ["Python", "FastAPI", "PostgreSQL", "AppSec"],
-    annotation: "PR #30 merged; CI and CodeQL passed. Early-stage prototype, not a CRA compliance or production security service.",
-    url: "https://github.com/silvatechf/DeviceTrust",
-  },,
-    {
+  },
+  {
     codename: "AppSec Scanner: Static Analysis Lab",
     description:
       "Python AST-based learning project that detects selected SQL injection and path-traversal patterns, records structured audit events, and can run as a CI security gate.",
     tags: ["Python", "AST", "CI", "Grafana"],
     annotation: "Learning lab. Benchmark uses 10 self-authored cases; not a production SAST replacement.",
     url: "https://github.com/silvatechf/AppSec-Scanner",
-  },,
-    {
+  },
+  {
+    codename: "DuckyArenas — Shop & Bank Backend",
+    description:
+      "Academic team project. Individual contribution to Django backend components for the shop catalog, wallet transactions, purchase coordination, and idempotency. This entry describes my contribution, not the whole team project.",
+    tags: ["Python", "Django", "Transactions", "Testing"],
+    annotation: "Academic contribution. PRs #87, #122, #127, #129, #130 and #132 merged; integration scope remains subject to the team repository documentation.",
+    url: "https://github.com/Martret92/duckyarenas-team5/pull/87",
+  },
+  {
     codename: "CyberReport-Pro: Security Reporting",
     description:
       "Python CLI prototype that turns structured security findings into PDF reports and includes study-oriented mappings to Spain's ENS and RGPD/LOPDGDD frameworks.",
     tags: ["Python", "CLI", "PDF", "Docker"],
     annotation: "Portfolio project. Regulatory mappings are educational references, not legal advice.",
     url: "https://github.com/silvatechf/CyberReport-Pro",
-  },,
-    {
+  },
+  {
     codename: "Triage Pipeline: Defensive Telemetry Lab",
     description:
       "Small Flask API lab that receives simulated authentication telemetry and applies an explainable heuristic risk score for local study.",
@@ -96,39 +104,38 @@ const OPERATIONS = [
 const ARTICLES = [
   {
     kind: "BACKEND & APPSEC",
+    title: "ExposureDetect: Authorized exposure assessment",
+    tag: "FastAPI · Scope enforcement · Audit · SARIF",
+    url: "https://github.com/silvatechf/exposure_detect",
+    excerpt: "Authorization-first security assessment with constrained targets, fail-closed scope checks, and auditable reporting.",
+  },
+  {
+    kind: "PRODUCT SECURITY",
+    title: "DeviceTrust: SBOM and traceable security decisions",
+    tag: "FastAPI · CycloneDX · SQLAlchemy · Audit",
+    url: "https://github.com/silvatechf/DeviceTrust",
+    excerpt: "An evidence-oriented prototype for software component context, vulnerability triage, and traceable product-security decisions.",
+  },
+  {
+    kind: "BACKEND & APPSEC",
     title: "Authorization Gateway: Fail-closed API authorization",
     tag: "FastAPI · JWT/JWKS · Tenant isolation · Tests",
     url: "https://github.com/silvatechf/authorization-gateway",
-    excerpt:
-      "A focused implementation study of authorization boundaries, ownership checks, tenant isolation, and negative security tests.",
+    excerpt: "A focused implementation study of authorization boundaries, ownership checks, tenant isolation, and negative security tests.",
   },
   {
-    kind: "PROJECT REPOSITORY",
-    title: "CyberReport-Pro: Security reporting automation",
-    tag: "Python · Compliance mapping",
-    url: "https://github.com/silvatechf/CyberReport-Pro",
-    excerpt:
-      "Field notes on building a Python automation engine that translates raw technical findings into executive PDF reports aligned with European regulations.",
+    kind: "STATIC ANALYSIS",
+    title: "AppSec Scanner: Python AST and CI experiments",
+    tag: "Python AST · Static analysis · CI",
+    url: "https://github.com/silvatechf/AppSec-Scanner",
+    excerpt: "Selected vulnerability patterns, audit events, and a limited, explicitly scoped self-authored benchmark.",
   },
   {
     kind: "TEAM BACKEND CONTRIBUTION",
     title: "DuckyArenas: Django Shop & Bank backend",
     tag: "Django · Transactions · Idempotency · Testing",
     url: "https://github.com/Martret92/duckyarenas-team5/pull/127",
-    excerpt:
-      "An individual contribution to a collaborative academic project, covering HTTP integration for shop and bank backend workflows; see the linked PRs and contribution case study for scope.",
-  },
-  {
-    kind: "PROJECT REPOSITORY",
-    title: "AppSec Scanner: Python AST and CI experiments",
-    tag: "Static Analysis · CI",
-    url: "https://github.com/silvatechf/AppSec-Scanner", 
-  },
-  {
-    kind: "PROJECT REPOSITORY",
-    title: "Triage Pipeline: defensive telemetry lab",
-    tag: "Python · Flask · REST API",
-    url: "https://github.com/silvatechf/triage-pipeline",
+    excerpt: "Individual contribution to a collaborative academic project; see linked pull requests and the contribution case study.",
   },
 ];
 
@@ -690,7 +697,7 @@ function Hero() {
       <div className="max-w-6xl mx-auto w-full">
         <Reveal delay={0}>
           <p className="font-mono text-xs tracking-widest text-text-secondary uppercase mb-6">
-            PYTHON BACKEND · APPLICATION SECURITY
+            PYTHON BACKEND · SECURE API DEVELOPMENT · APPSEC
           </p>
         </Reveal>
 
@@ -706,8 +713,8 @@ function Hero() {
           <div className="flex items-center gap-4 mt-8 mb-6 max-w-xl">
             <span className="h-px w-12 bg-accent-secondary shrink-0" />
             <p className="font-body text-text-secondary text-sm md:text-base">
-              Junior Python Backend Developer focused on Application Security (AppSec). Based in
-              Barcelona, I build and test backend features and security-focused tools.
+              Python Backend Developer focused on secure API development and Application Security (AppSec). Based in
+              Barcelona, I build testable backend features and security-focused tools.
             </p>
           </div>
         </Reveal>
